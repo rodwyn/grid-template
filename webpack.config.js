@@ -1,5 +1,6 @@
 var path = require('path');
 var autoprefixer = require('autoprefixer');
+var SassLintPlugin = require('sass-lint-webpack');
 
 module.exports = {
   entry: './app/scripts/main.js',
@@ -29,5 +30,14 @@ module.exports = {
   },
   devServer: {
     contentBase: __dirname + '/app'
-  }
+  },
+  plugins: [
+    new SassLintPlugin({
+      options: {
+        files: {
+          ignore: [ 'node_modules/**/*', 'app/styles/reset.scss' ]
+        }
+      }
+    })
+  ]
 };
