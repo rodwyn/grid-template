@@ -1,0 +1,67 @@
+body {
+  background: $navigation-bg-color;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+}
+
+.navigation {
+  background: $navigation-bg-color;
+}
+
+.main {
+  background: $main-bg-color;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.top-bar {
+  background: $top-bar-bg-color;
+  border-bottom: 1px solid $top-bar-br-color;
+  grid-column: 1 / 4;
+  grid-row: 1;
+  padding: 8px 16px;
+}
+
+.stats-container {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+}
+
+.actvities-container {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+}
+
+.app-version {
+  grid-column: 1 / 2;
+}
+
+.device-usage {
+  grid-column: 2 / 3;
+}
+
+.quick-settings {
+  grid-column: 3 / 4;
+}
+
+.recent-activities {
+  grid-column: 1 / 2;
+  grid-row: 6 / 8;
+}
+
+.visitors-location {
+  grid-column: 2 / 4;
+}
+
+.todo-list {
+  grid-column: 2 / 3;
+}
+
+.daily-activity-users {
+  grid-column: 3 / 4;
+}
