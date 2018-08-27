@@ -1,0 +1,29 @@
+.calendar-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin-bottom: 12px;
+
+  > span {
+    cursor: pointer;
+    justify-self: center;
+
+    &:first-child {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  span {
+    justify-self: center;
+    padding: 12px 0;
+
+    &:not(:nth-child(-n+7)) {
+      cursor: pointer;
+    }
+  }
+}
