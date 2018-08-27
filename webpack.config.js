@@ -25,6 +25,16 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [{
+	      	loader: 'file-loader',
+	      	options: {
+	        	name: '[name].[ext]',
+	        	outputPath: 'fonts/'
+	      	}
+				}]
       }
     ]
   },
@@ -35,7 +45,7 @@ module.exports = {
     new SassLintPlugin({
       options: {
         files: {
-          ignore: [ 'node_modules/**/*', 'app/styles/reset.scss' ]
+          ignore: [ 'node_modules/**/*', 'app/styles/reset.scss', 'app/styles/icons.scss' ]
         }
       }
     })
