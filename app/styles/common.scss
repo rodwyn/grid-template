@@ -1,0 +1,16 @@
+body {
+  background: $navigation-bg-color;
+  color: $font-color-base;
+  font-family: $font-family-primary;
+  font-size: 14px;
+  font-weight: $font-weight-regular;
+}
+
+section {
+  background: $white;
+  padding: 16px;
+}
+
+small {
+  font-size: 12px;
+}

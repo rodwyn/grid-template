@@ -1,18 +1,7 @@
-body {
-  background: $navigation-bg-color;
-  color: $font-color-base;
-  font-family: $font-family-primary;
-  font-size: 14px;
-  font-weight: $font-weight-regular;
-}
-
-section {
-  background: $white;
-  padding: 16px;
-}
-
-small {
-  font-size: 12px;
+.app {
+  display: grid;
+  // grid-template-columns: 260px 1fr;
+  height: 100vh;
 }
 
 .danger {
@@ -59,22 +48,14 @@ small {
   text-transform: uppercase;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  height: 100vh;
-}
-
 .navigation {
   background: $navigation-bg-color;
+  color: $white;
+  padding: 12px;
 }
 
 .main {
   background: $main-bg-color;
-  display: grid;
-  grid-auto-rows: min-content;
-  grid-gap: 16px;
-  grid-template-columns: repeat(12, 1fr);
 }
 
 .top-bar {
@@ -109,7 +90,6 @@ small {
 .stat-item {
   background: $navigation-bg-color;
   color: $white;
-  grid-column: span 2;
   padding: 16px 10px 20px;
   position: relative;
 
@@ -137,34 +117,20 @@ small {
 }
 
 .performance-section {
-  grid-column: span 3;
   grid-row: span 2;
 }
 
-.earning-report-section {
-  grid-column: span 9;
+.earning-report-table {
+  align-items: center;
+  display: grid;
+  grid-column-gap: 12px;
+  grid-template-columns: auto 1fr;
 
-  .earning-report-table {
-    align-items: center;
-    display: grid;
-    grid-column-gap: 12px;
-    grid-template-columns: auto 1fr;
-
-    [class^='icon-'] {
-      font-size: 68px;
-    }
+  [class^='icon-'] {
+    font-size: 68px;
   }
 }
 
-.stat-container {
-  display: grid;
-  grid-column: span 12;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.team-section {
-  grid-column: span 4;
-}
 
 .partner-card {
   align-items: center;
@@ -204,14 +170,9 @@ small {
   }
 }
 
-.calendar-section {
-  grid-column: span 4;
-}
-
 .updates {
   background: $blue-1;
   color: $white;
-  grid-column: span 4;
 }
 
 .name-initial-container {
@@ -232,10 +193,6 @@ small {
       margin-right: 8px;
     }
   }
-}
-
-.todo-list-section {
-  grid-column: span 5;
 }
 
 .todo-list {
@@ -267,4 +224,8 @@ small {
       }
     }
   }
+}
+
+.projects-section {
+  grid-column: span 7;
 }
