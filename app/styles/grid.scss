@@ -6,7 +6,7 @@
 }
 
 .container-gap {
-  grid-gap: 16px;
+  grid-gap: $grid-gap-size;
 }
 
 @mixin generate-columns($columns) {
@@ -16,7 +16,7 @@
     }
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: $media-breakpoint-sm) {
     @for $i from 1 through $columns {
       .col-sm-#{$i} {
         grid-column: span $i;
@@ -24,7 +24,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $media-breakpoint-md) {
     @for $i from 1 through $columns {
       .col-md-#{$i} {
         grid-column: span $i;
@@ -32,7 +32,7 @@
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: $media-breakpoint-lg) {
     @for $i from 1 through $columns {
       .col-lg-#{$i} {
         grid-column: span $i;
@@ -40,7 +40,7 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $media-breakpoint-xl) {
     @for $i from 1 through $columns {
       .col-xl-#{$i} {
         grid-column: span $i;

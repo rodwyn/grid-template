@@ -1,15 +1,21 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  // flex-direction: column;
+
+  @media (min-width: 992px) {
+    flex-direction: column;
+  }
 
   > li {
-    // margin-bottom: 12px;
-    // padding-bottom: 12px;
     text-transform: uppercase;
 
     &:hover {
       border-bottom: $white solid thin;
+    }
+
+    @media (min-width: 992px) {
+      margin-bottom: $font-size-base;
+      padding-bottom: $font-size-base;
     }
   }
 }

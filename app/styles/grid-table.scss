@@ -1,0 +1,25 @@
+.grid-table {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(2, 1fr);
+
+  li {
+    font-weight: $font-weight-bold;
+    margin-bottom: $space-sm;
+
+    &:nth-child(even) {
+      font-size: $font-size-xl;
+    }
+
+    &:nth-child(odd) {
+      font-size: $font-size-md;
+    }
+
+    small {
+      display: block;
+      font-size: $font-size-base;
+      font-weight: $font-weight-light;
+      margin-top: $space-xxs;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.todo-list {
+  > li {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      border-bottom: $gray-3 $border-style-base $border-sm;
+      margin-bottom: $space-sm;
+      padding-bottom: $space-sm;
+    }
+
+    span {
+      &:last-child,
+      &:first-child {
+        cursor: pointer;
+        font-size: $font-size-xl;
+      }
+
+      &:nth-child(2) {
+        align-self: center;
+        flex-grow: 1;
+        padding: 0 $space-sm;
+      }
+
+      &:nth-child(3) {
+        color: $danger;
+      }
+    }
+  }
+}

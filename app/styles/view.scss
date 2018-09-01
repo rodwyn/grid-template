@@ -1,86 +1,26 @@
 .app {
   display: grid;
-  // grid-template-columns: 260px 1fr;
   height: 100vh;
-}
 
-.danger {
-  color: $danger;
-}
-
-.success {
-  color: $success;
-}
-
-.warning {
-  color: $warning;
-}
-
-.grid-table {
-  display: grid;
-  grid-auto-rows: min-content;
-  grid-template-columns: repeat(2, 1fr);
-
-  li {
-    font-weight: $font-weight-bold;
-    margin-bottom: 12px;
-
-    &:nth-child(even) {
-      font-size: 20px;
-    }
-
-    &:nth-child(odd) {
-      font-size: 16px;
-    }
-
-    small {
-      display: block;
-      font-size: 12px;
-      font-weight: $font-weight-light;
-      margin-top: 6px;
-    }
+  @media (min-width: $media-breakpoint-lg) {
+    grid-template-columns: $navigation-width 1fr;
   }
 }
 
 .section-title {
   font-weight: $font-weight-light;
-  margin-bottom: 12px;
+  margin-bottom: $space-sm;
   text-transform: uppercase;
 }
 
 .navigation {
   background: $navigation-bg-color;
   color: $white;
-  padding: 12px;
+  padding: $space-sm;
 }
 
 .main {
   background: $main-bg-color;
-}
-
-.top-bar {
-  background: $top-bar-bg-color;
-  border-bottom: 1px solid $top-bar-br-color;
-  grid-column: span 12;
-  padding: 8px 16px;
-
-  > div {
-    display: inline;
-    font-size: 18px;
-  }
-
-  .user-wrapper {
-    float: right;
-
-    [class^='icon-'],
-    [class*=' icon-'] {
-      cursor: pointer;
-
-      &:not(:last-child) {
-        margin-right: 12px;
-      }
-    }
-  }
 }
 
 .search-wrapper {
@@ -90,29 +30,29 @@
 .stat-item {
   background: $navigation-bg-color;
   color: $white;
-  padding: 16px 10px 20px;
+  padding: $space-md $space-sm $space-lg;
   position: relative;
 
   &:not(:first-of-type) {
     &::before {
-      border-left: 2px solid $stat-item-bd-color;
+      border-left: $border-md $border-style-base $stat-item-bd-color;
       content: '';
       height: 65px;
       left: 0;
-      margin-top: 10px;
+      margin-top: $space-sm;
       position: absolute;
     }
   }
 
   .count-top,
   .count-bottom {
-    font-size: 13px;
+    font-size: $font-size-base;
   }
 
   .count {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 47px;
+    font-size: $count-font-size;
+    font-weight: $font-weight-bold;
+    line-height: $count-line-height;
   }
 }
 
@@ -123,7 +63,7 @@
 .earning-report-table {
   align-items: center;
   display: grid;
-  grid-column-gap: 12px;
+  grid-column-gap: $space-sm;
   grid-template-columns: auto 1fr;
 
   [class^='icon-'] {
@@ -135,13 +75,13 @@
 .partner-card {
   align-items: center;
   display: grid;
-  grid-column-gap: 12px;
+  grid-column-gap: $space-sm;
   grid-template-columns: auto 1fr;
 
   &:not(:last-child) {
     border-bottom: $gray-5 solid thin;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
+    margin-bottom: $space-xl;
+    padding-bottom: $space-sm;
   }
 
   .partner-img {
@@ -161,7 +101,7 @@
     h6 {
       display: inline-block;
       font-weight: $font-weight-bold;
-      margin-bottom: 8px;
+      margin-bottom: $space-xs;
 
       &+span {
         float: right;
@@ -176,56 +116,21 @@
 }
 
 .name-initial-container {
-  margin-top: 12px;
+  margin-top: $space-sm;
 
   > span {
-    border: $white solid 2px;
+    border: $white $border-style-base $border-sm;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    font-size: 16px;
-    height: 20px;
-    line-height: 20px;
+    font-size: $font-size-md;
+    height: $name-initial-size;
+    line-height: $name-initial-size;
     text-align: center;
-    width: 20px;
+    width: $name-initial-size;
 
     &:not(:last-child) {
-      margin-right: 8px;
+      margin-right: $space-xs;
     }
   }
-}
-
-.todo-list {
-  > li {
-    display: flex;
-    justify-content: space-between;
-
-    &:not(:last-child) {
-      border-bottom: $gray-3 solid thin;
-      margin-bottom: 12px;
-      padding-bottom: 12px;
-    }
-
-    span {
-      &:last-child,
-      &:first-child {
-        cursor: pointer;
-        font-size: 20px;
-      }
-
-      &:nth-child(2) {
-        align-self: center;
-        flex-grow: 1;
-        padding: 0 12px;
-      }
-
-      &:nth-child(3) {
-        color: $danger;
-      }
-    }
-  }
-}
-
-.projects-section {
-  grid-column: span 7;
 }

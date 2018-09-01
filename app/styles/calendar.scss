@@ -1,7 +1,7 @@
 .calendar-controls {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  margin-bottom: 12px;
+  margin-bottom: $space-sm;
 
   > span {
     cursor: pointer;
@@ -20,7 +20,7 @@
 
   span {
     justify-self: center;
-    padding: 12px 0;
+    padding: $space-sm 0;
 
     &:not(:nth-child(-n+7)) {
       cursor: pointer;

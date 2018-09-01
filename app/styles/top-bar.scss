@@ -1,0 +1,23 @@
+.top-bar {
+  background: $top-bar-bg-color;
+  border-bottom: $border-sm $border-style-base $top-bar-br-color;
+  padding: 8px 16px;
+
+  > div {
+    display: inline;
+    font-size: $font-size-lg;
+  }
+
+  .user-wrapper {
+    float: right;
+
+    [class^='icon-'],
+    [class*=' icon-'] {
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: $space-sm;
+      }
+    }
+  }
+}
